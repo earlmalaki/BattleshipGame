@@ -1,2 +1,3 @@
 # BattleshipGame
-CMSC56 Project files
+
+A C implementation of a classic game -- Battleship
