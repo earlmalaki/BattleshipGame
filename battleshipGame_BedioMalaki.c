@@ -1,12 +1,30 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////(c) Bedio PRogramming
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/**
+  *
+  * BATTLESHIP GAME
+  *
+  * CMSC56 - Final Project
+  * 
+  * Bedio, Aiden Justin
+  * Malaki, Earl Timothy
+  *
+  * BSCS - I | 2nd Semester
+  * 
+  * University of the Philippines - Cebu
+  * Lahug, Cebu City, Cebu
+  * Philippines
+  *
+  */
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <stdio.h>
 #include <conio.h>
 #include <stdbool.h>
 #include <time.h>
 
-
+/* Declare Constants */
 #define ROWS 10
 #define COLS 10
 
@@ -20,6 +38,7 @@
 #define WEST  2
 #define EAST  3
 
+/* Declare Structs */
 typedef struct Stats
 {
 	int life;
@@ -50,6 +69,10 @@ typedef struct Fleet
 	short  length;
 	char   *name;
 } Fleet;
+
+
+/*** Helper Functions ***/
+
 
 /*
 void Display
@@ -92,6 +115,7 @@ void Display (Tile Player[][COLS], Tile AI[][COLS])
 
 	}
 }
+
 
 /*
 void updateGameBoard
@@ -152,12 +176,12 @@ void ifwithinboard (Boolean cardinals[], int bound, int direction)
 	}
 }
 
+
 /*
 	Boolean checkSunkShip
 		purpose:
 			Checks if a ship has been sunked
 */
-
 Boolean checkSunkShip (short sunkShip[][NUM_OF_SHIPS], short player, char shipSymbol, Tile Player[][COLS], Tile AI[][COLS])
 {
 	Boolean sunked = FALSE;
@@ -283,12 +307,12 @@ Boolean checkSunkShip (short sunkShip[][NUM_OF_SHIPS], short player, char shipSy
 
 }
 
+
 /*
 	short checkShot
 		purpose:
 			returns 0 if miss, 1 if hit, -1 if invalid
 */
-
 short checkShot (Tile gameBoard[][COLS], Coordinate target)
 {
 	int hit = -2;
@@ -317,12 +341,12 @@ short checkShot (Tile gameBoard[][COLS], Coordinate target)
 	return hit;
 }
 
+
 /*
 	Coordinate getTarget
 		purpose:
 			gets X and Y coordinate
 */
-
 Coordinate getTarget (Tile Player[][COLS], Tile AI[][COLS],int player)
 {
 	Coordinate target;
@@ -420,6 +444,7 @@ Coordinate generatePosition (int direction, int length) {
 	return position;
 }
 
+
 /*
 	Boolean isValidLocation
 		purpose:
@@ -471,6 +496,7 @@ Boolean isValidLocation (Tile gameBoard[][COLS], Coordinate position, int direct
 	return isValid;
 }
 
+
 /*
 	void initializeship
 		purpose:
@@ -512,6 +538,7 @@ void initializeship (Tile gameBoard[][COLS], Fleet ship, Coordinate position, in
 	}
 }
 
+
 /*
 	void generateposition
 		purpose:
@@ -540,7 +567,7 @@ void generateposition (Tile gameBoard[][COLS], Fleet ship[], int player)
 
 
 
-
+													/***** MAIN FUNCTION *****/
 
 int main(int argc, char const *argv[])
 {
@@ -562,6 +589,8 @@ int main(int argc, char const *argv[])
 
 		printf ("\n\tEnter Mode\n\tEnter Here: ");
 		scanf ("%d", &option);
+
+
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             if (option == 1)
@@ -1066,13 +1095,9 @@ int main(int argc, char const *argv[])
 
 	} while (optionchar);
 
-
-
-
-	/* code */
 	return 0;
 }
 
 
 
-///////////////////////////////////////////SO HELP US GOD !!! :)  //////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
