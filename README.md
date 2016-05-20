@@ -15,6 +15,17 @@ AI:
   4. Gameplay is turn-based. Once set up, game proper will start with Player 1's turn.
   5. The winner is the first player to sink all the ships of the opposing player.
 
+
+
+Developed by:
+Bedio, Aiden Justin
+Malaki, Earl Timothy
+
+A CMSC56 Final Project
+
+University of the Philippines - Cebu
+BSCS - I | 2nd Semester | 2016
+
 NOTE:
 "#include <conio.h>"
 Uses conio header file which may cause trouble for non-DOS/Windows systems.
